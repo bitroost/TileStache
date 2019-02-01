@@ -148,7 +148,7 @@ class Provider:
         if isinstance(queries, dict):
             # Add 1 to include space for zoom level 0
             n_zooms = max(int(z) for z in queries) + 1
-            queryiter = ((int(z), q) for z, q in queries.iteritems())
+            queryiter = ((int(z), q) for z, q in queries.items())
         else:  # specified as array
             n_zooms = len(queries)
             queryiter = enumerate(queries)
